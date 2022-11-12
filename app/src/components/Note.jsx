@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import { Button } from './Button'
 
 const Note = (props) => {
   const { note, toggleImportance } = props
@@ -10,7 +11,7 @@ const Note = (props) => {
   return (
     <li className='note'>
       {note.content}
-      <button disabled={Boolean(!toggleImportance)} onClick={toggleImportance}>{label}</button>
+      <Button disabled={Boolean(!toggleImportance)} onClick={toggleImportance}>{label}</Button>
     </li>
   )
 }
